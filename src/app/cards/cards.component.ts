@@ -43,6 +43,9 @@ export class CardsComponent implements OnInit, OnDestroy {
       this._structureService.structures = data;
     });
 
+    // set the serverURL in the local storage
+    localStorage.setItem('server_url', settings.serverURL);
+
     // Get the logged user
     fetch(settings.retrieveProfile, {
       method: 'GET',
