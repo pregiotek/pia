@@ -199,21 +199,9 @@ export class CardsComponent implements OnInit, OnDestroy {
   async refreshContent() {
     const pia = new Pia();
     const data: any = await pia.getAll();
-    this._piaService.pias = data;
-    this._piaService.calculProgress();
-    this.sortOrder = localStorage.getItem('sortOrder');
-    this.sortValue = localStorage.getItem('sortValue');
-    setTimeout(() => {
-      this.sortPia();
-    }, 200);
-  }
 
-  /**
-   * Define how to sort the list.
-   */
-  private sortPia() {
     // Filter to show only pias that are associated with the logged in user
-    let userPias = this._piaService.pias.filter(pia => {
+    let userPias = data.filter(pia => {
       return (
         pia.author_name === this._piaService.loggedUser ||
         pia.validator_name === this._piaService.loggedUser ||
@@ -223,6 +211,19 @@ export class CardsComponent implements OnInit, OnDestroy {
 
     this._piaService.pias = userPias;
 
+    this._piaService.calculProgress();
+    this.sortOrder = localStorage.getItem('sortOrder');
+    this.sortValue = localStorage.getItem('sortValue');
+    this.sortPia();
+    // setTimeout(() => {
+    //   this.sortPia();
+    // }, 200);
+  }
+
+  /**
+   * Define how to sort the list.
+   */
+  private sortPia() {
     this._piaService.pias.sort((a, b) => {
       let firstValue = a[this.sortValue];
       let secondValue = b[this.sortValue];
