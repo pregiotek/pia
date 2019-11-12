@@ -32,34 +32,34 @@ export class SettingsComponent implements OnInit {
   /**
    * Record the URL of the server.
    */
-  onSubmit() {
-    /* Set it back to empty if server mode is disabled */
-    if (
-      this.settingsForm.controls['server_url'].value === null ||
-      this.settingsForm.controls['server_url'].value.length <= 0
-    ) {
-      localStorage.removeItem('server_url');
-      this._modalsService.openModal('modal-update-server-url-ok');
-    } else {
-      const serverUrl = this.settingsForm.value.server_url.trim();
-      fetch(serverUrl + '/pias', {
-        mode: 'cors'
-      })
-        .then(response => {
-          return response.ok;
-        })
-        .then((ok: boolean) => {
-          if (ok) {
-            localStorage.setItem('server_url', serverUrl);
-            this._modalsService.openModal('modal-update-server-url-ok');
-          } else {
-            this._modalsService.openModal('modal-update-server-url-nok');
-          }
-        })
-        .catch(error => {
-          console.error('Request failed', error);
-          this._modalsService.openModal('modal-update-server-url-nok');
-        });
-    }
-  }
+  // onSubmit() {
+  //   /* Set it back to empty if server mode is disabled */
+  //   if (
+  //     this.settingsForm.controls['server_url'].value === null ||
+  //     this.settingsForm.controls['server_url'].value.length <= 0
+  //   ) {
+  //     localStorage.removeItem('server_url');
+  //     this._modalsService.openModal('modal-update-server-url-ok');
+  //   } else {
+  //     const serverUrl = this.settingsForm.value.server_url.trim();
+  //     fetch(serverUrl + '/pias', {
+  //       mode: 'cors'
+  //     })
+  //       .then(response => {
+  //         return response.ok;
+  //       })
+  //       .then((ok: boolean) => {
+  //         if (ok) {
+  //           localStorage.setItem('server_url', serverUrl);
+  //           this._modalsService.openModal('modal-update-server-url-ok');
+  //         } else {
+  //           this._modalsService.openModal('modal-update-server-url-nok');
+  //         }
+  //       })
+  //       .catch(error => {
+  //         console.error('Request failed', error);
+  //         this._modalsService.openModal('modal-update-server-url-nok');
+  //       });
+  //   }
+  // }
 }
