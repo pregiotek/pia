@@ -25,7 +25,7 @@
       }
     }
     &-refuse-title {
-      color: $pia-red;
+      color: $pia-green-dark;
     }
     &-content, &-refuse-content {
       padding: 15px;
@@ -41,7 +41,7 @@
       }
     }
     &-refuse {
-      border-top: solid $pia-red 5px;
+      border-top: solid $pia-green-dark 5px;
       background-color: #fff;
       padding: 10px 40px 40px 40px;
       box-shadow: 2px 1px 18px 1px #c2c2c2;

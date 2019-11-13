@@ -125,19 +125,19 @@
         }
         &:nth-child(3) {
           .pia-sectionBlock-title {
-            color: $pia-red;
-            border-color: $pia-red;
+            color: $pia-green-dark;
+            border-color: $pia-green-dark;
           }
           hr {
             max-width: 182px;
           }
           a {
             &:focus, &:hover, &:active, &.active {
-              background-color: $pia-red;
+              background-color: $pia-green-dark;
             }
           }
           .fa-pencil-square-o.pia-fa-valid, .fa-cog.pia-fa-valid, .fa-check-square-o {
-            color: $pia-red;
+            color: $pia-green-dark;
           }
         }
         &:last-child {

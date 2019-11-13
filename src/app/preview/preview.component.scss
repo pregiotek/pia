@@ -121,15 +121,15 @@
               &:nth-child(3) {
                 order: 4;
                 .pia-sectionBlock-title {
-                  color: $pia-red;
-                  border-color: $pia-red;
+                  color: $pia-green-dark;
+                  border-color: $pia-green-dark;
                 }
                 hr {
                   max-width: 182px;
                 }
                 a {
                   &:focus, &:hover, &:active, &.active {
-                    background-color: $pia-red;
+                    background-color: $pia-green-dark;
                   }
                 }
               }
@@ -432,7 +432,7 @@
       }
       &.headline3 {
         .pia-fullPreviewBlock-headline-title {
-          border-left-color: $pia-red;
+          border-left-color: $pia-green-dark;
         }
       }
     }

@@ -2,10 +2,10 @@
 .pia {
   &-evaluationBlock {
     position: relative;
-    border-top: 5px solid $pia-red;
+    border-top: 5px solid $pia-green-dark;
     margin: 10px 0;
     &-title {
-      color: $pia-red;
+      color: $pia-green-dark;
       font-size: 1.75rem;
       margin-top: 8px;
     }
@@ -15,7 +15,7 @@
       top: 10px;
       right: 10px;
       button {
-        color: $pia-red;
+        color: $pia-green-dark;
         font-size: 1.8rem;
       }
     }

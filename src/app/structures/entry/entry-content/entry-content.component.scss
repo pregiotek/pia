@@ -113,10 +113,10 @@
       &3 {
         .pia-entryContentBlock-header {
           > div:first-child {
-            background-color: $pia-red;
+            background-color: $pia-green-dark;
           }
           h1, h2 {
-            color: $pia-red;
+            color: $pia-green-dark;
           }
         }
       }
@@ -186,14 +186,14 @@
       }
       &-requiredFields {
         margin-top: 6px !important;
-        color: $pia-red !important;
+        color: $pia-green-dark !important;
         font-size: 1.15rem !important;
       }
     }
   }
 
   &-cancelBtn {
-    color: $pia-red;
+    color: $pia-green-dark;
   }
 
   &-previewBlock {

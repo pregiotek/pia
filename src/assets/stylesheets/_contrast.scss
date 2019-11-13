@@ -44,13 +44,13 @@ body.pia-contrast {
       }
     }
     &-red {
-      color: $pia-red-dark;
-      border-color: $pia-red-dark;
+      color: $pia-green-dark;
+      border-color: $pia-green-dark;
       &:focus,
       &:hover,
       &.btn-active,
       &.btn-active[disabled] {
-        background-color: $pia-red-dark;
+        background-color: $pia-green-dark;
         color: #fff;
       }
     }
@@ -72,10 +72,10 @@ body.pia-contrast {
       color: $pia-gray-dark;
     }
     .c32 {
-      fill: $pia-red-dark;
+      fill: $pia-green-dark;
     }
     .path_32 {
-      stroke: $pia-red-dark;
+      stroke: $pia-green-dark;
     }
     .c33 {
       fill: $pia-green-dark;
@@ -154,8 +154,8 @@ body.pia-contrast {
   .pia-cardsBlock {
     &.pia-doingBlock {
       .pia-cardsBlock-header-title {
-        border-bottom-color: $pia-red-dark;
-        color: $pia-red-dark;
+        border-bottom-color: $pia-green-dark;
+        color: $pia-green-dark;
       }
     }
     &.pia-archiveBlock {
@@ -309,7 +309,7 @@ body.pia-contrast {
   .pia-entryContentBlock {
     .pia-status-info {
       a {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
     }
     &-section1 {
@@ -331,20 +331,20 @@ body.pia-contrast {
       }
       .pia-entryContentBlock-header {
         div:first-child {
-          background-color: $pia-red-dark !important;
+          background-color: $pia-green-dark !important;
         }
         h1,
         h2 {
-          color: $pia-red-dark !important;
+          color: $pia-green-dark !important;
         }
       }
     }
     &-footer {
       &-requiredFields {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
       .pia-cancelBtn {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
       &-measures {
         button:first-child {
@@ -388,7 +388,7 @@ body.pia-contrast {
       &-measures,
       &-risks {
         h2 {
-          background-color: $pia-red-dark !important;
+          background-color: $pia-green-dark !important;
         }
       }
     }
@@ -465,22 +465,22 @@ body.pia-contrast {
         }
         &:nth-child(3) {
           .pia-sectionBlock-title {
-            color: $pia-red-dark !important;
-            border-color: $pia-red-dark !important;
+            color: $pia-green-dark !important;
+            border-color: $pia-green-dark !important;
           }
           a {
             &:focus,
             &:hover,
             &:active,
             &.active {
-              background-color: $pia-red-dark !important;
+              background-color: $pia-green-dark !important;
             }
           }
           i {
             &.fa-pencil-square-o.pia-fa-valid,
             &.fa-cog.pia-fa-valid,
             &.fa-check-square-o {
-              color: $pia-red-dark !important;
+              color: $pia-green-dark !important;
             }
             &.fa-cog,
             &.fa-pencil-square-o {
@@ -544,7 +544,7 @@ body.pia-contrast {
       }
       &-definition {
         > p {
-          color: $pia-red-dark !important;
+          color: $pia-green-dark !important;
         }
         .btn {
           .pia-icon-add {
@@ -587,7 +587,7 @@ body.pia-contrast {
       color: $pia-gray-dark;
     }
     &-delete {
-      color: $pia-red-dark;
+      color: $pia-green-dark;
     }
     form {
       input::placeholder,
@@ -623,13 +623,13 @@ body.pia-contrast {
 
   /* evaluations */
   .pia-evaluationBlock {
-    border-top-color: $pia-red-dark;
+    border-top-color: $pia-green-dark;
     &-title {
-      color: $pia-red-dark;
+      color: $pia-green-dark;
     }
     &-edit {
       button {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
     }
     &-date {
@@ -637,7 +637,7 @@ body.pia-contrast {
     }
     &-gauge {
       .red-highlight {
-        color: $pia-red-dark;
+        color: $pia-green-dark;
       }
     }
     textarea::placeholder {
@@ -662,7 +662,7 @@ body.pia-contrast {
       color: $pia-green-dark !important;
     }
     .icon-red {
-      color: $pia-red-dark !important;
+      color: $pia-green-dark !important;
     }
     .icon-gray {
       color: $pia-gray-dark !important;
@@ -670,7 +670,7 @@ body.pia-contrast {
   }
   #modal-abandon-pia {
     p {
-      color: $pia-red-dark !important;
+      color: $pia-green-dark !important;
     }
     .abandonText {
       color: $pia-gray-dark !important;
@@ -678,7 +678,7 @@ body.pia-contrast {
   }
   #modal-refuse-pia {
     p {
-      color: $pia-red-dark !important;
+      color: $pia-green-dark !important;
     }
   }
 
@@ -716,10 +716,10 @@ body.pia-contrast {
     }
   }
   .pia-validationHistoryBlock-refuse {
-    border-top: 5px solid $pia-red-dark;
+    border-top: 5px solid $pia-green-dark;
     &-title {
       > p {
-        color: $pia-red-dark;
+        color: $pia-green-dark;
       }
     }
   }
@@ -741,7 +741,7 @@ body.pia-contrast {
     }
     &-legend {
       li:first-child {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
     }
     &-date {
@@ -768,12 +768,12 @@ body.pia-contrast {
         background-color: $pia-blue !important;
       }
       .pia-red {
-        background-color: $pia-red-dark !important;
+        background-color: $pia-green-dark !important;
       }
     }
     &-right {
       h3 {
-        color: $pia-red-dark !important;
+        color: $pia-green-dark !important;
       }
     }
     .pia-legend {
@@ -811,7 +811,7 @@ body.pia-contrast {
             }
             &:last-child {
               input:checked + label {
-                background-color: $pia-red-dark !important;
+                background-color: $pia-green-dark !important;
               }
             }
           }
@@ -857,7 +857,7 @@ body.pia-contrast {
       background: linear-gradient(90deg, $pia-green-dark, #961f73);
     }
     &-background-4 {
-      background: linear-gradient(90deg, $pia-green-dark, $pia-red-dark);
+      background: linear-gradient(90deg, $pia-green-dark, $pia-green-dark);
     }
   }
 
@@ -913,7 +913,7 @@ body.pia-contrast {
       }
       &.headline3 {
         .pia-fullPreviewBlock-headline-title {
-          border-left-color: $pia-red-dark !important;
+          border-left-color: $pia-green-dark !important;
         }
       }
     }
@@ -957,6 +957,6 @@ body.pia-contrast {
     color: $pia-green-dark !important;
   }
   .red-highlight {
-    color: $pia-red-dark !important;
+    color: $pia-green-dark !important;
   }
 }

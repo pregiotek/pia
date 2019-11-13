@@ -61,7 +61,7 @@
           vertical-align: -5px;
         }
         .red {
-          color: $pia-red;
+          color: $pia-green-dark;
         }
       }
     }
@@ -181,7 +181,7 @@
 }
 #modal-abandon-pia {
   p {
-    color: $pia-red;
+    color: $pia-green-dark;
   }
   .icon-red {
     font-size: 7rem;
@@ -196,7 +196,7 @@
 }
 #modal-refuse-pia {
   p {
-    color: $pia-red;
+    color: $pia-green-dark;
   }
 }
 #completed-evaluation,
@@ -232,7 +232,7 @@
   color: $pia-gray;
 }
 .icon-red {
-  color: $pia-red;
+  color: $pia-green-dark;
 }
 .icon-blue {
   color: $pia-blue;

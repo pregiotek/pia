@@ -74,13 +74,13 @@
 
   &-red {
     @extend .btn-default;
-    color: $pia-red;
-    border-color: $pia-red;
+    color: $pia-green-dark;
+    border-color: $pia-green-dark;
     &:focus,
     &:hover,
     &.btn-active,
     &.btn-active[disabled] {
-      background-color: $pia-red;
+      background-color: $pia-green-dark;
       color: white;
     }
   }
