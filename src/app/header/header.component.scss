@@ -23,6 +23,7 @@
     a {
       img {
         vertical-align: middle;
+        margin-left: 7rem;
       }
     }
     div {
@@ -39,4 +40,8 @@
       }
     }
   }
+}
+
+#dashboard {
+  color: $pia-gray-dark !important;
 }

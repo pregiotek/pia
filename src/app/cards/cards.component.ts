@@ -89,7 +89,10 @@ export class CardsComponent implements OnInit, OnDestroy {
       localStorage.setItem('sortOrder', this.sortOrder);
       localStorage.setItem('sortValue', this.sortValue);
     }
-    this.refreshContent();
+    setTimeout(() => {
+      this.refreshContent();
+    }, 1000);
+    // this.refreshContent();
     this.piaForm = new FormGroup({
       name: new FormControl(),
       author_name: new FormControl(),
