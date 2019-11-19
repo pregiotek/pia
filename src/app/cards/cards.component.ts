@@ -75,6 +75,9 @@ export class CardsComponent implements OnInit, OnDestroy {
       .then(data => {
         data.users.forEach(user => {
           this._piaService.availableUsers.push(user);
+        }),
+        data.admin.forEach(admin => {
+          this._piaService.availableAdmins.push(admin);
         });
       })
       .catch(error => {
@@ -212,6 +215,12 @@ export class CardsComponent implements OnInit, OnDestroy {
       );
     });
 
+    this._piaService.availableAdmins.forEach(admin => {
+      if (admin.username === this._piaService.loggedUser) {
+        userPias = data;
+      }
+    });
+
     this._piaService.pias = userPias;
 
     this._piaService.calculProgress();
@@ -222,6 +231,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     //   this.sortPia();
     // }, 200);
   }
+
 
   /**
    * Define how to sort the list.

@@ -4,5 +4,8 @@
     { "username": "user2", "name": "User Two" },
     { "username": "user3", "name": "User Three" },
     { "username": "user4", "name": "User Four" }
+  ],
+  "admin": [
+    { "username": "user2", "name": "User Two" }
   ]
 }

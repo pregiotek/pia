@@ -6,7 +6,7 @@
   },
   "ProfileDetail": {
     "userDetailsField": {
-      "idField": "user1",
+      "idField": "user2",
       "firstNameField": "Nicola",
       "lastNameField": "Di Giorgio",
       "isActiveField": false,
