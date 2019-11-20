@@ -15,6 +15,7 @@ import { ModalsService } from 'src/app/modals/modals.service';
 export class PiaService {
   pias = [];
   availableUsers = [];
+  availableAdmins = []; //Athora admins
   loggedUser = '';
   pia: Pia = new Pia();
   answer: Answer = new Answer();

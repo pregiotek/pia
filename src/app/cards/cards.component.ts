@@ -37,7 +37,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     public _structureService: StructureService
   ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     const structure = new Structure();
     structure.getAll().then((data: any) => {
       this._structureService.structures = data;
@@ -47,7 +47,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     localStorage.setItem('server_url', settings.serverURL);
 
     // Get the logged user
-    fetch(settings.retrieveProfile, {
+    await fetch(settings.retrieveProfile, {
       method: 'GET',
       mode: 'cors'
     })
@@ -64,7 +64,7 @@ export class CardsComponent implements OnInit, OnDestroy {
       });
 
     // Get available users
-    fetch(settings.getAvailableUsers, {
+    await fetch(settings.getAvailableUsers, {
       method: 'GET',
       mode: 'cors'
     })
@@ -75,6 +75,9 @@ export class CardsComponent implements OnInit, OnDestroy {
       .then(data => {
         data.users.forEach(user => {
           this._piaService.availableUsers.push(user);
+        }),
+        data.admin.forEach(admin => {
+          this._piaService.availableAdmins.push(admin);
         });
       })
       .catch(error => {
@@ -212,6 +215,15 @@ export class CardsComponent implements OnInit, OnDestroy {
       );
     });
 
+    //Athora - admins can see all cards on the dashboard
+    if(this._piaService.availableAdmins && this._piaService.availableAdmins.length > 0){
+      this._piaService.availableAdmins.forEach(admin => {
+        if (admin.username === this._piaService.loggedUser) {
+          userPias = data;
+        }
+      });
+    }
+
     this._piaService.pias = userPias;
 
     this._piaService.calculProgress();
@@ -222,6 +234,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     //   this.sortPia();
     // }, 200);
   }
+
 
   /**
    * Define how to sort the list.
