@@ -215,11 +215,13 @@ export class CardsComponent implements OnInit, OnDestroy {
       );
     });
 
-    this._piaService.availableAdmins.forEach(admin => {
-      if (admin.username === this._piaService.loggedUser) {
-        userPias = data;
-      }
-    });
+    if(this._piaService.availableAdmins && this._piaService.availableAdmins.length > 0){
+      this._piaService.availableAdmins.forEach(admin => {
+        if (admin.username === this._piaService.loggedUser) {
+          userPias = data;
+        }
+      });
+    }
 
     this._piaService.pias = userPias;
 
