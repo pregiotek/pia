@@ -37,7 +37,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     public _structureService: StructureService
   ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     const structure = new Structure();
     structure.getAll().then((data: any) => {
       this._structureService.structures = data;
@@ -47,7 +47,7 @@ export class CardsComponent implements OnInit, OnDestroy {
     localStorage.setItem('server_url', settings.serverURL);
 
     // Get the logged user
-    fetch(settings.retrieveProfile, {
+    await fetch(settings.retrieveProfile, {
       method: 'GET',
       mode: 'cors'
     })
@@ -64,7 +64,7 @@ export class CardsComponent implements OnInit, OnDestroy {
       });
 
     // Get available users
-    fetch(settings.getAvailableUsers, {
+    await fetch(settings.getAvailableUsers, {
       method: 'GET',
       mode: 'cors'
     })
