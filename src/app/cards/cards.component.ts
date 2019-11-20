@@ -215,6 +215,7 @@ export class CardsComponent implements OnInit, OnDestroy {
       );
     });
 
+    //Athora - admins can see all cards on the dashboard
     if(this._piaService.availableAdmins && this._piaService.availableAdmins.length > 0){
       this._piaService.availableAdmins.forEach(admin => {
         if (admin.username === this._piaService.loggedUser) {
