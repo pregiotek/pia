@@ -5,6 +5,8 @@ import { Comment } from './comment.model';
 
 import { MeasureService } from 'src/app/entry/entry-content/measures/measures.service';
 import { ModalsService } from 'src/app/modals/modals.service';
+import { PiaService } from 'src/app/services/pia.service';
+import { settings } from 'src/assets/settings/settings';
 
 @Component({
   selector: 'app-comments',
@@ -27,7 +29,8 @@ export class CommentsComponent implements OnInit {
 
   constructor(private el: ElementRef,
               private _measureService: MeasureService,
-              private _modalsService: ModalsService) { }
+              private _modalsService: ModalsService,
+              private _piaService: PiaService) {}
 
   ngOnInit() {
     if (this.answer.updated_at && this.answer.updated_at.toString() !== 'Invalid Date') {
@@ -52,6 +55,26 @@ export class CommentsComponent implements OnInit {
     this.commentsForm = new FormGroup({
       description: new FormControl()
     });
+
+    // set the serverURL in the local storage
+    localStorage.setItem('server_url', settings.serverURL);
+    
+    // Get the logged user
+    fetch(settings.retrieveProfile, {
+      method: 'GET',
+      mode: 'cors'
+    })
+      .then(response => {
+        return response.json();
+      })
+
+      .then(data => {
+        this._piaService.loggedUser =
+          data.ProfileDetail.userDetailsField.idField;
+      })
+      .catch(error => {
+        console.error('Request failed', error);
+      });
   }
 
   /**
@@ -102,6 +125,7 @@ export class CommentsComponent implements OnInit {
         const commentRecord = new Comment();
         commentRecord.for_measure = false;
         commentRecord.description = this.commentsForm.value.description;
+        commentRecord.description += "\n " + this._piaService.loggedUser;
         commentRecord.pia_id = this.pia.id;
         if (this.measure) {
           commentRecord.for_measure = true;
